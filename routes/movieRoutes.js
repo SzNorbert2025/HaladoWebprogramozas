@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const router = express.Router();
 const Movie = require("../models/Movie");
 
-// 1. Összes film lekérése
+
 router.get("/", async (req, res) => {
   try {
     const movies = await Movie.find();
@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// 2. Egy film lekérése ID alapján
+
 router.get("/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -43,7 +43,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// 3. Új film hozzáadása
+
 router.post("/", async (req, res) => {
   try {
     const movie = new Movie(req.body);
@@ -63,7 +63,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// 4. Film módosítása
+
 router.put("/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -103,7 +103,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// 5. Film törlése
+
 router.delete("/:id", async (req, res) => {
   try {
     const { id } = req.params;
