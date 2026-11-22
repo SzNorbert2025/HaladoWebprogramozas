@@ -1,0 +1,1 @@
+A seed.js fájl 10 film adatait tartalmazza, amelyek automatikusan feltölthetők a MongoDB-adatbázisba.
