@@ -4,7 +4,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const Movie = require("./models/Movie");
 
-// A 10 film adatai
+
 const movies = [
   {
     title: "Interstellar",
@@ -78,7 +78,7 @@ const movies = [
   }
 ];
 
-// Filmek feltöltése a MongoDB-be
+
 const seedDatabase = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
